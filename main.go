@@ -2,15 +2,10 @@ package main
 
 import (
 	"fmt"
-	"log"
 
-	"lesson/config"
+	"lesson/app/models"
 )
 
 func main() {
-	fmt.Println(config.Config.Port)
-	fmt.Println(config.Config.SQLDriver)
-	fmt.Println(config.Config.DbName)
-	fmt.Println(config.Config.LogFile)
-	log.Println("text")
+	fmt.Println(models.Db)
 }
