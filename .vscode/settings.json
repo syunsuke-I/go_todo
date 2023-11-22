@@ -4,5 +4,6 @@
   "go.formatTool": "gofmt",
   "cSpell.words": [
     "AUTOINCREMENTS"
-  ]
+  ],
+  "editor.formatOnSave": true
 }

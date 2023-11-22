@@ -1,3 +1,5 @@
 2023/11/21 22:46:24 main.go:15: text
 2023/11/21 23:09:33 base.go:21: sql: unknown driver "sqlite" (forgotten import?)
 2023/11/21 23:11:12 base.go:21: sql: unknown driver "sqlite" (forgotten import?)
+2023/11/22 13:34:27 todos.go:29: near ")": syntax error
+2023/11/22 13:42:29 todos.go:29: near ")": syntax error

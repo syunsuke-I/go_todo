@@ -34,7 +34,7 @@ func (u *User) CreateUser() (err error){
 	if err != nil {
 		log.Fatalln(err)
 	}
-	return
+	return err
 }
 
 func GetUser(id int) (user User, err error){
