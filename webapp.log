@@ -3,3 +3,91 @@
 2023/11/21 23:11:12 base.go:21: sql: unknown driver "sqlite" (forgotten import?)
 2023/11/22 13:34:27 todos.go:29: near ")": syntax error
 2023/11/22 13:42:29 todos.go:29: near ")": syntax error
+2023/11/23 14:43:35 server.go:3214: http: panic serving [::1]:65077: open app/views/templates%!(EXTRA string=layout): no such file or directory
+goroutine 35 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.21.1/libexec/src/net/http/server.go:1868 +0xb0
+panic({0x1009eb0e0?, 0x14000180150?})
+	/opt/homebrew/Cellar/go/1.21.1/libexec/src/runtime/panic.go:920 +0x26c
+text/template.Must(...)
+	/opt/homebrew/Cellar/go/1.21.1/libexec/src/text/template/helper.go:26
+lesson/app/controllers.generateHTML({0x100a34a88?, 0x1400019a000}, {0x1009c5d20, 0x100a31230}, {0x14000151a88?, 0x2, 0x14000012050?})
+	/Users/is/Desktop/HC/go-todo/lesson/app/controllers/server.go:15 +0x1d8
+lesson/app/controllers.top({0x100a34a88?, 0x1400019a000?}, 0x14000151ae8?)
+	/Users/is/Desktop/HC/go-todo/lesson/app/controllers/route_main.go:8 +0x70
+net/http.HandlerFunc.ServeHTTP(0x14000151b08?, {0x100a34a88?, 0x1400019a000?}, 0x1008b8b08?)
+	/opt/homebrew/Cellar/go/1.21.1/libexec/src/net/http/server.go:2136 +0x38
+net/http.(*ServeMux).ServeHTTP(0x100c79360?, {0x100a34a88, 0x1400019a000}, 0x14000188000)
+	/opt/homebrew/Cellar/go/1.21.1/libexec/src/net/http/server.go:2514 +0x144
+net/http.serverHandler.ServeHTTP({0x14000180030?}, {0x100a34a88?, 0x1400019a000?}, 0x6?)
+	/opt/homebrew/Cellar/go/1.21.1/libexec/src/net/http/server.go:2938 +0xbc
+net/http.(*conn).serve(0x14000174000, {0x100a35158, 0x14000114e40})
+	/opt/homebrew/Cellar/go/1.21.1/libexec/src/net/http/server.go:2009 +0x518
+created by net/http.(*Server).Serve in goroutine 1
+	/opt/homebrew/Cellar/go/1.21.1/libexec/src/net/http/server.go:3086 +0x4cc
+2023/11/23 14:43:35 server.go:3214: http: panic serving [::1]:65078: open app/views/templates%!(EXTRA string=layout): no such file or directory
+goroutine 36 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.21.1/libexec/src/net/http/server.go:1868 +0xb0
+panic({0x1009eb0e0?, 0x14000180240?})
+	/opt/homebrew/Cellar/go/1.21.1/libexec/src/runtime/panic.go:920 +0x26c
+text/template.Must(...)
+	/opt/homebrew/Cellar/go/1.21.1/libexec/src/text/template/helper.go:26
+lesson/app/controllers.generateHTML({0x100a34a88?, 0x1400019a1c0}, {0x1009c5d20, 0x100a31230}, {0x1400005ca88?, 0x2, 0x140000120b0?})
+	/Users/is/Desktop/HC/go-todo/lesson/app/controllers/server.go:15 +0x1d8
+lesson/app/controllers.top({0x100a34a88?, 0x1400019a1c0?}, 0x1400005cae8?)
+	/Users/is/Desktop/HC/go-todo/lesson/app/controllers/route_main.go:8 +0x70
+net/http.HandlerFunc.ServeHTTP(0x1400005cb08?, {0x100a34a88?, 0x1400019a1c0?}, 0x1008b8b08?)
+	/opt/homebrew/Cellar/go/1.21.1/libexec/src/net/http/server.go:2136 +0x38
+net/http.(*ServeMux).ServeHTTP(0x100c79360?, {0x100a34a88, 0x1400019a1c0}, 0x1400015e100)
+	/opt/homebrew/Cellar/go/1.21.1/libexec/src/net/http/server.go:2514 +0x144
+net/http.serverHandler.ServeHTTP({0x14000114f90?}, {0x100a34a88?, 0x1400019a1c0?}, 0x6?)
+	/opt/homebrew/Cellar/go/1.21.1/libexec/src/net/http/server.go:2938 +0xbc
+net/http.(*conn).serve(0x14000174090, {0x100a35158, 0x14000114e40})
+	/opt/homebrew/Cellar/go/1.21.1/libexec/src/net/http/server.go:2009 +0x518
+created by net/http.(*Server).Serve in goroutine 1
+	/opt/homebrew/Cellar/go/1.21.1/libexec/src/net/http/server.go:3086 +0x4cc
+2023/11/23 14:43:35 server.go:3214: http: panic serving [::1]:65079: open app/views/templates%!(EXTRA string=layout): no such file or directory
+goroutine 5 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.21.1/libexec/src/net/http/server.go:1868 +0xb0
+panic({0x1009eb0e0?, 0x14000180420?})
+	/opt/homebrew/Cellar/go/1.21.1/libexec/src/runtime/panic.go:920 +0x26c
+text/template.Must(...)
+	/opt/homebrew/Cellar/go/1.21.1/libexec/src/text/template/helper.go:26
+lesson/app/controllers.generateHTML({0x100a34a88?, 0x1400019a380}, {0x1009c5d20, 0x100a31230}, {0x1400005ca88?, 0x2, 0x14000012120?})
+	/Users/is/Desktop/HC/go-todo/lesson/app/controllers/server.go:15 +0x1d8
+lesson/app/controllers.top({0x100a34a88?, 0x1400019a380?}, 0x1400005cae8?)
+	/Users/is/Desktop/HC/go-todo/lesson/app/controllers/route_main.go:8 +0x70
+net/http.HandlerFunc.ServeHTTP(0x1400005cb08?, {0x100a34a88?, 0x1400019a380?}, 0x1008b8b08?)
+	/opt/homebrew/Cellar/go/1.21.1/libexec/src/net/http/server.go:2136 +0x38
+net/http.(*ServeMux).ServeHTTP(0x100c79360?, {0x100a34a88, 0x1400019a380}, 0x14000188300)
+	/opt/homebrew/Cellar/go/1.21.1/libexec/src/net/http/server.go:2514 +0x144
+net/http.serverHandler.ServeHTTP({0x14000180360?}, {0x100a34a88?, 0x1400019a380?}, 0x6?)
+	/opt/homebrew/Cellar/go/1.21.1/libexec/src/net/http/server.go:2938 +0xbc
+net/http.(*conn).serve(0x1400018a240, {0x100a35158, 0x14000114e40})
+	/opt/homebrew/Cellar/go/1.21.1/libexec/src/net/http/server.go:2009 +0x518
+created by net/http.(*Server).Serve in goroutine 1
+	/opt/homebrew/Cellar/go/1.21.1/libexec/src/net/http/server.go:3086 +0x4cc
+2023/11/23 14:43:36 server.go:3214: http: panic serving [::1]:65080: open app/views/templates%!(EXTRA string=layout): no such file or directory
+goroutine 7 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.21.1/libexec/src/net/http/server.go:1868 +0xb0
+panic({0x1009eb0e0?, 0x1400028a0f0?})
+	/opt/homebrew/Cellar/go/1.21.1/libexec/src/runtime/panic.go:920 +0x26c
+text/template.Must(...)
+	/opt/homebrew/Cellar/go/1.21.1/libexec/src/text/template/helper.go:26
+lesson/app/controllers.generateHTML({0x100a34a88?, 0x140002aa000}, {0x1009c5d20, 0x100a31230}, {0x14000284a88?, 0x2, 0x1400028e020?})
+	/Users/is/Desktop/HC/go-todo/lesson/app/controllers/server.go:15 +0x1d8
+lesson/app/controllers.top({0x100a34a88?, 0x140002aa000?}, 0x14000284ae8?)
+	/Users/is/Desktop/HC/go-todo/lesson/app/controllers/route_main.go:8 +0x70
+net/http.HandlerFunc.ServeHTTP(0x14000284b08?, {0x100a34a88?, 0x140002aa000?}, 0x1008b8b08?)
+	/opt/homebrew/Cellar/go/1.21.1/libexec/src/net/http/server.go:2136 +0x38
+net/http.(*ServeMux).ServeHTTP(0x100c79360?, {0x100a34a88, 0x140002aa000}, 0x14000290000)
+	/opt/homebrew/Cellar/go/1.21.1/libexec/src/net/http/server.go:2514 +0x144
+net/http.serverHandler.ServeHTTP({0x1400028a030?}, {0x100a34a88?, 0x140002aa000?}, 0x6?)
+	/opt/homebrew/Cellar/go/1.21.1/libexec/src/net/http/server.go:2938 +0xbc
+net/http.(*conn).serve(0x1400018a3f0, {0x100a35158, 0x14000114e40})
+	/opt/homebrew/Cellar/go/1.21.1/libexec/src/net/http/server.go:2009 +0x518
+created by net/http.(*Server).Serve in goroutine 1
+	/opt/homebrew/Cellar/go/1.21.1/libexec/src/net/http/server.go:3086 +0x4cc
