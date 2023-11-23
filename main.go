@@ -1,11 +1,9 @@
 package main
 
 import (
-	"lesson/app/models"
+	"lesson/app/controllers"
 )
 
 func main() {
-
-	t, _ := models.GetTodo(3)
-	t.DeleteTodo()
+	controllers.StartMainSever()
 }
