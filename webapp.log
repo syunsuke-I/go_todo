@@ -91,3 +91,5 @@ net/http.(*conn).serve(0x1400018a3f0, {0x100a35158, 0x14000114e40})
 	/opt/homebrew/Cellar/go/1.21.1/libexec/src/net/http/server.go:2009 +0x518
 created by net/http.(*Server).Serve in goroutine 1
 	/opt/homebrew/Cellar/go/1.21.1/libexec/src/net/http/server.go:3086 +0x4cc
+2023/11/23 16:09:16 users.go:132: sql: no rows in result set
+2023/11/23 16:10:42 users.go:133: sql: no rows in result set
