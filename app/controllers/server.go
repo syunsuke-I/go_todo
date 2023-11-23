@@ -2,6 +2,7 @@ package controllers
 
 import (
 	"fmt"
+	"lesson/app/models"
 	"lesson/config"
 	"net/http"
 	"text/template"
@@ -21,5 +22,17 @@ func StartMainSever() error {
 	http.HandleFunc("/signup", signup)
 	http.HandleFunc("/login", login)
 	http.HandleFunc("/authenticate", authenticate)
+	http.HandleFunc("/todos", index)
 	return http.ListenAndServe(":"+config.Config.Port, nil)
+}
+
+func session(w http.ResponseWriter, r *http.Request) (session models.Session, err error) {
+	cookie, err := r.Cookie("_cookie")
+	if err != nil {
+		session = models.Session{UUID: cookie.Value}
+		if ok, _ := session.CheckSession(); !ok {
+			err = fmt.Errorf("Invalid session")
+		}
+	}
+	return session, err
 }
