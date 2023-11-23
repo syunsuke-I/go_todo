@@ -90,7 +90,7 @@ func GetUserByEmail(email string) (user User, err error) {
 	return user, err
 }
 
-func (u *User) CreateSessions() (session Session, err error) {
+func (u *User) CreateSession() (session Session, err error) {
 	session = Session{}
 	cmd1 := `insert into sessions(
 		uuid,
@@ -119,6 +119,15 @@ func (u *User) CreateSessions() (session Session, err error) {
 	return session, err
 }
 
+func (session *Session) DeleteSessionByUUID() (err error) {
+	cmd := `delete from sessions where uuid = ? `
+	_, err = Db.Exec(cmd, session.UUID)
+	if err != nil {
+		log.Fatalln(err)
+	}
+	return err
+}
+
 func (session *Session) CheckSession() (valid bool, err error) {
 	cmd := `select * from sessions where uuid = ? `
 	err = Db.QueryRow(cmd, session.UUID).Scan(
@@ -130,7 +139,6 @@ func (session *Session) CheckSession() (valid bool, err error) {
 
 	if err != nil {
 		valid = false
-		log.Fatalln(err)
 		return
 	}
 

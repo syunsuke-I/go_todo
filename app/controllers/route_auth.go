@@ -12,7 +12,7 @@ func signup(w http.ResponseWriter, r *http.Request) {
 		if err != nil {
 			generateHTML(w, nil, "layout", "public_navbar", "signup")
 		} else {
-			http.Redirect(w, r, "/todos", 302)
+			http.Redirect(w, r, "/todos", http.StatusFound)
 		}
 	} else if r.Method == "POST" {
 		err := r.ParseForm()
@@ -37,18 +37,30 @@ func login(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		generateHTML(w, nil, "layout", "public_navbar", "login")
 	} else {
-		http.Redirect(w, r, "/todos", 302)
+		http.Redirect(w, r, "/todos", http.StatusFound)
 	}
+}
+
+func logout(w http.ResponseWriter, r *http.Request) {
+	cookie, err := r.Cookie("_cookie")
+	if err != nil {
+		log.Println(err)
+	}
+	if err != http.ErrNoCookie {
+		session := models.Session{UUID: cookie.Value}
+		session.DeleteSessionByUUID()
+	}
+	http.Redirect(w, r, "/login", http.StatusFound)
 }
 
 func authenticate(w http.ResponseWriter, r *http.Request) {
 	user, err := models.GetUserByEmail(r.PostFormValue("email"))
 	if err != nil {
 		log.Println(err)
-		http.Redirect(w, r, "/", http.StatusFound)
+		http.Redirect(w, r, "/login", http.StatusFound)
 	}
 	if user.Password == models.Encrypt(r.PostFormValue("password")) {
-		session, err := user.CreateSessions()
+		session, err := user.CreateSession()
 		if err != nil {
 			log.Println(err)
 		}

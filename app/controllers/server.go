@@ -23,15 +23,16 @@ func StartMainSever() error {
 	http.HandleFunc("/login", login)
 	http.HandleFunc("/authenticate", authenticate)
 	http.HandleFunc("/todos", index)
+	http.HandleFunc("/logout", logout)
 	return http.ListenAndServe(":"+config.Config.Port, nil)
 }
 
 func session(w http.ResponseWriter, r *http.Request) (session models.Session, err error) {
 	cookie, err := r.Cookie("_cookie")
-	if err != nil {
+	if err == nil {
 		session = models.Session{UUID: cookie.Value}
 		if ok, _ := session.CheckSession(); !ok {
-			err = fmt.Errorf("Invalid session")
+			err = fmt.Errorf("invalid session")
 		}
 	}
 	return session, err
