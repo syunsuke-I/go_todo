@@ -149,7 +149,7 @@ func (session *Session) CheckSession() (valid bool, err error) {
 	return valid, err
 }
 
-func (session *Session) GetUserByCookie() (user User, err error) {
+func (session *Session) GetUserBySession() (user User, err error) {
 	user = User{}
 	cmd := `select id,uuid,name,email,created_at from users where id = ?`
 	err = Db.QueryRow(cmd, session.UserID).Scan(

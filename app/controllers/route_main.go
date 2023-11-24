@@ -18,7 +18,7 @@ func index(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		http.Redirect(w, r, "/", http.StatusFound)
 	} else {
-		user, err := session.GetUserByCookie()
+		user, err := session.GetUserBySession()
 		if err != nil {
 			log.Fatalln(err)
 		}
@@ -34,5 +34,26 @@ func todoNew(w http.ResponseWriter, r *http.Request) {
 		http.Redirect(w, r, "/login", http.StatusFound)
 	} else {
 		generateHTML(w, nil, "layout", "private_navbar", "todo_new")
+	}
+}
+
+func todoSave(w http.ResponseWriter, r *http.Request) {
+	session, err := session(w, r)
+	if err != nil {
+		http.Redirect(w, r, "/login", http.StatusFound)
+	} else {
+		err = r.ParseForm()
+		if err != nil {
+			log.Println(err)
+		}
+		user, err := session.GetUserBySession()
+		if err != nil {
+			log.Println(err)
+		}
+		content := r.PostFormValue("content")
+		if err := user.CreateTodo(content); err != nil {
+			log.Println(err)
+		}
+		http.Redirect(w, r, "/todos", http.StatusFound)
 	}
 }
