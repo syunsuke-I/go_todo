@@ -1,0 +1,11 @@
+{{define "content"}}
+<form class="flex flex-col mt-10 p-4 max-w-sm mx-auto bg-white shadow-md" role="form" action="/authenticate" method="post">
+  <h2 class="text-center text-2xl font-bold mb-4 flex items-center justify-center">
+    <i class="fas fa-comments mr-2"></i> SampleApp
+  </h2>
+  <div class="text-lg font-medium mb-4">ログイン</div>
+  <input type="email" name="email" class="p-2 mb-4 border rounded focus:border-blue-500 focus:ring focus:ring-blue-200" placeholder="Email" required autofocus>
+  <input type="password" name="password" class="p-2 mb-4 border rounded focus:border-blue-500 focus:ring focus:ring-blue-200" placeholder="パスワード">
+  <button class="py-2 mb-2 bg-blue-500 text-white rounded hover:bg-blue-600" type="submit">ログイン</button>
+</form>
+{{end}}

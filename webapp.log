@@ -1,1 +1,53 @@
-2023/11/21 22:46:24 main.go:15: text
+2023/11/23 20:34:54 route_auth.go:46: _cookie=8deb17e0-89ce-11ee-bb6d-8a95c2135bb4
+2023/11/23 20:39:55 route_auth.go:46: _cookie=8deb17e0-89ce-11ee-bb6d-8a95c2135bb4
+2023/11/23 20:41:33 route_auth.go:46: _cookie=8deb17e0-89ce-11ee-bb6d-8a95c2135bb4
+2023/11/23 20:56:31 route_auth.go:46: _cookie=8deb17e0-89ce-11ee-bb6d-8a95c2135bb4
+2023/11/23 21:18:48 route_auth.go:38: false
+2023/11/23 21:19:45 route_auth.go:38: false
+2023/11/23 21:20:40 route_auth.go:47: false
+2023/11/23 21:21:44 route_auth.go:50: true
+2023/11/23 21:25:01 route_auth.go:52: true
+2023/11/23 21:25:01 route_auth.go:41: !
+2023/11/23 21:26:17 route_auth.go:41: !
+2023/11/23 21:27:43 route_auth.go:41: !
+2023/11/23 21:28:19 route_auth.go:41: !
+2023/11/23 21:28:21 route_auth.go:41: !
+2023/11/23 21:28:25 route_auth.go:41: !
+2023/11/23 21:30:44 route_auth.go:41: !
+2023/11/23 21:30:47 route_auth.go:41: !
+2023/11/23 21:30:50 route_auth.go:41: !
+2023/11/23 21:31:00 route_auth.go:41: !
+2023/11/23 21:36:40 route_main.go:14: ?
+2023/11/23 21:37:27 route_main.go:10: <nil>
+2023/11/23 21:37:27 route_main.go:15: ?
+2023/11/23 21:41:11 server.go:33: <nil>
+2023/11/23 21:41:11 server.go:34: _cookie=8deb17e0-89ce-11ee-bb6d-8a95c2135bb4
+2023/11/23 21:41:33 server.go:33: <nil>
+2023/11/23 21:41:33 server.go:34: _cookie=8deb17e0-89ce-11ee-bb6d-8a95c2135bb4
+2023/11/23 21:42:16 server.go:33: <nil>
+2023/11/23 21:42:16 server.go:34: _cookie=8deb17e0-89ce-11ee-bb6d-8a95c2135bb4
+2023/11/23 21:42:19 server.go:33: <nil>
+2023/11/23 21:42:19 server.go:34: _cookie=8deb17e0-89ce-11ee-bb6d-8a95c2135bb4
+2023/11/23 21:42:19 server.go:33: <nil>
+2023/11/23 21:42:19 server.go:34: _cookie=8deb17e0-89ce-11ee-bb6d-8a95c2135bb4
+2023/11/23 21:47:17 server.go:3214: http: superfluous response.WriteHeader call from lesson/app/controllers.top (route_main.go:12)
+2023/11/23 21:47:19 server.go:3214: http: superfluous response.WriteHeader call from lesson/app/controllers.top (route_main.go:12)
+2023/11/23 21:47:25 server.go:3214: http: superfluous response.WriteHeader call from lesson/app/controllers.top (route_main.go:12)
+2023/11/23 21:47:28 server.go:3214: http: superfluous response.WriteHeader call from lesson/app/controllers.top (route_main.go:12)
+2023/11/23 21:47:37 server.go:3214: http: superfluous response.WriteHeader call from lesson/app/controllers.top (route_main.go:12)
+2023/11/23 21:47:41 server.go:3214: http: superfluous response.WriteHeader call from lesson/app/controllers.top (route_main.go:12)
+2023/11/23 21:47:47 server.go:3214: http: superfluous response.WriteHeader call from lesson/app/controllers.top (route_main.go:12)
+2023/11/23 21:47:49 server.go:3214: http: superfluous response.WriteHeader call from lesson/app/controllers.top (route_main.go:12)
+2023/11/23 21:47:52 server.go:3214: http: superfluous response.WriteHeader call from lesson/app/controllers.top (route_main.go:12)
+2023/11/23 21:47:53 server.go:3214: http: superfluous response.WriteHeader call from lesson/app/controllers.top (route_main.go:12)
+2023/11/23 21:48:20 server.go:3214: http: superfluous response.WriteHeader call from lesson/app/controllers.top (route_main.go:12)
+2023/11/24 06:59:13 route_main.go:23: sql: no rows in result set
+2023/11/24 07:00:02 route_main.go:23: sql: no rows in result set
+2023/11/24 07:00:43 route_main.go:23: sql: no rows in result set
+2023/11/24 07:01:24 route_main.go:18: {2 8a03a138-8a4b-11ee-859a-8a95c2135bb4 test@test 1 2023-11-24 06:59:13.77414 +0900 +0900}
+2023/11/24 07:09:22 route_main.go:23: sql: expected 6 destination arguments in Scan, not 5
+2023/11/24 07:10:41 route_main.go:23: sql: Scan error on column index 4, name "password": unsupported Scan, storing driver.Value type string into type *time.Time
+2023/11/24 21:45:15 route_main.go:27: [{1 あとでやる 1 2023-11-24 21:38:04.75736 +0900 +0900} {2 Todoを追加 1 2023-11-24 21:39:27.830134 +0900 +0900}]
+2023/11/24 21:46:10 route_main.go:22: {1 035872ae-89f5-11ee-92ce-8a95c2135bb4 test test@test  2023-11-23 20:39:51.118793 +0900 +0900 []}
+2023/11/24 23:37:10 server.go:3214: http: superfluous response.WriteHeader call from lesson/app/controllers.top (route_main.go:14)
+2023/11/24 23:44:11 server.go:3214: http: superfluous response.WriteHeader call from lesson/app/controllers.top (route_main.go:14)
