@@ -2,8 +2,6 @@
   "go.alternateTools": {},
   "go.toolsEnvVars": {},
   "go.formatTool": "gofmt",
-  "cSpell.words": [
-    "AUTOINCREMENTS"
-  ],
+  "cSpell.words": ["AUTOINCREMENTS", "todos"],
   "editor.formatOnSave": true
 }
